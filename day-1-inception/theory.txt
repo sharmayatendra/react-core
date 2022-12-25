@@ -1,0 +1,34 @@
+Q1 - What is Emmet?
+Ans - It is a set of plugin to improve the workflow of HTML & CSS.
+
+Q2 - Difference between a Library & a Framework?
+Ans - 1. Framework and Library both are code written by someone else that helps to perform task in less verbose way.
+2. A Framework inverts the control of program. It tells the developer what they need. A library doesn't. The programmer calls the library where and when they need it.
+3. In case of library we call a method means we are in control but in case of framework the control is inverted i.e the framework calls us.
+4. The degree of freedom a library or framework gives to developer dictate how opinionated it is.
+
+Q3 - What is CDN? Why do we use it?
+Ans - CDN: Content Delivery Network
+CDN refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+A CDN allows for the quick transfer of assets needed for loading internet content like HTML pages JavaScript files , stylesheets etc.
+Uses: -> to improve website load time
+-> reducing bandwidth costs.
+-> increasing content availability and redundancy.
+-> improving website security.
+
+Q4 - Why is React known as React?
+Ans - Since react is a frontend library means whenever user tries to interact on webpage through the user events the View should react with that user interaction.
+
+Q5 - What is crossorigin in script tag?
+Ans - crossorigin attribute sets the mode of request to HTTP CORS.A crossorigin request is a request for a resource from other domain.
+
+Q6 - What is difference between React & ReactDOM?
+Ans - React library is responsible for creating views while ReactDOM is responsible for actual render of UI in browser.
+
+Q7 - What is difference between react.development.js and react.production.js files via CDN?
+Ans - react.development.js - needs to be used only in development mode it might include source maps , debugging and sometimes hot reloading as well.
+react.production.js - it runs in the production mode means it will be run in our client's machine.It builds source files into one or more minimized files.
+
+Q8 - What is async and defer?
+Ans - async -> in this case while HTML parsing is going on the scripts are fetched in parallel and as soon as it is fetched HTML parsing stops there & execution of scripts will start.
+defer -> in this case scripts are fetched in parallel with HTML parsing and once HTML parsing is completed execution of script will take place.
