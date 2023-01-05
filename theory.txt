@@ -61,17 +61,17 @@ Q7 - What is Hot Module Replacement?
 Ans - rebuilding of the files and updates it into the browser without full reload of page.
 
 Q8 - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
-Ans - image optimization , HMR , caching , minification , 
+Ans - image optimization , HMR , caching , minification , File Watcher Algorithm
 
 Q9 - What is `.gitignore`? What should we add and not add into it?
 Ans - gitignore: it is a file which consists of files which we don't need to include into the git. We should add those files into it which we can generate again on server. We should not add those files which can't be generated on server.
 
 Q10 - What is the difference between `package.json` and `package-lock.json`?
 Ans - package.json: file which contains the information about our packages used into the project.
-    - package-lock.json: it consist of exact snapshot of our packages and further if those packages are depends upon some other packages(transitive dependencies).
+    - package-lock.json: it consist of exact snapshot of our packages which needs to be use on production and further if those packages are depends upon some other packages(transitive dependencies).
 
 Q11 - Why should I not modify `package-lock.json`?
-Ans - It shouldn't be modify because it contains the exact information about the package version , transitive dependencies etc.
+Ans - It shouldn't be modify because it contains the exact information about the package version , transitive dependencies etc.It locks the version.It maintains the integrity in hash
 
 Q12 - What is `node_modules` ? Is it a good idea to push that on git?
 Ans - heavy folder which contains all the dependencies & transitive dependencies used in our project. We shouldn't push into git because it is very heavy & we can also generate it on server.
