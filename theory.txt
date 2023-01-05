@@ -1,0 +1,87 @@
+Q1 - What is Emmet?
+Ans - It is a set of plugin to improve the workflow of HTML & CSS.
+
+Q2 - Difference between a Library & a Framework?
+Ans - 1. Framework and Library both are code written by someone else that helps to perform task in less verbose way.
+2. A Framework inverts the control of program. It tells the developer what they need. A library doesn't. The programmer calls the library where and when they need it.
+3. In case of library we call a method means we are in control but in case of framework the control is inverted i.e the framework calls us.
+4. The degree of freedom a library or framework gives to developer dictate how opinionated it is.
+
+Q3 - What is CDN? Why do we use it?
+Ans - CDN: Content Delivery Network
+CDN refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+A CDN allows for the quick transfer of assets needed for loading internet content like HTML pages JavaScript files , stylesheets etc.
+Uses: -> to improve website load time
+-> reducing bandwidth costs.
+-> increasing content availability and redundancy.
+-> improving website security.
+
+Q4 - Why is React known as React?
+Ans - Since react is a frontend library means whenever user tries to interact on webpage through the user events the View should react with that user interaction.
+
+Q5 - What is crossorigin in script tag?
+Ans - crossorigin attribute sets the mode of request to HTTP CORS.A crossorigin request is a request for a resource from other domain.
+
+Q6 - What is difference between React & ReactDOM?
+Ans - React library is responsible for creating views while ReactDOM is responsible for actual render of UI in browser.
+
+Q7 - What is difference between react.development.js and react.production.js files via CDN?
+Ans - react.development.js - needs to be used only in development mode it might include source maps , debugging and sometimes hot reloading as well.
+react.production.js - it runs in the production mode means it will be run in our client's machine.It builds source files into one or more minimized files.
+
+Q8 - What is async and defer?
+Ans - async -> in this case while HTML parsing is going on the scripts are fetched in parallel and as soon as it is fetched HTML parsing stops there & execution of scripts will start.
+defer -> in this case scripts are fetched in parallel with HTML parsing and once HTML parsing is completed execution of script will take place.
+
+Day2: 31/12/2022
+Q1 - What is 'NPM'?
+Ans - It doesn't stand for "node package manager". It consists of different kinds of packages which we can use directly in our projects.
+
+Q2 - What is Parcel/Webpack? Why do we need it?
+Ans - Parcel/Webpack is a bundler. We need it because it's helpful & provides out of the box development experience like: 
+    1 - Zero configuration 
+    2 - It is fast
+    3 - Automatic Production Optimization
+    4 - Scalable
+
+Q3 - What is .parcel-cache?
+Ans - It stores information about your project when parcel builds it, so that when rebuilds it, so that when it rebuilds , it doesn't have to re-parse and re-analyze everything from scratch.
+
+Q4 - What is npx?
+Ans - It is executor for our node packages & it comes with npm , it can execute any package from the npm registery without even installing it.
+
+Q5 - What is difference between `dependencies` vs `devDependencies`?
+Ans - Dependencies: packages which are required to run the project on client machine 
+    - devDependencies: packages which only requires on developer machine for development , testing etc. and not needed on client machine.
+
+Q6 - What is Tree Shaking?
+Ans - Removal of dead code when bundling JS files into a single file.
+
+Q7 - What is Hot Module Replacement?
+Ans - rebuilding of the files and updates it into the browser without full reload of page.
+
+Q8 - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+Ans - image optimization , HMR , caching , minification , 
+
+Q9 - What is `.gitignore`? What should we add and not add into it?
+Ans - gitignore: it is a file which consists of files which we don't need to include into the git. We should add those files into it which we can generate again on server. We should not add those files which can't be generated on server.
+
+Q10 - What is the difference between `package.json` and `package-lock.json`?
+Ans - package.json: file which contains the information about our packages used into the project.
+    - package-lock.json: it consist of exact snapshot of our packages and further if those packages are depends upon some other packages(transitive dependencies).
+
+Q11 - Why should I not modify `package-lock.json`?
+Ans - It shouldn't be modify because it contains the exact information about the package version , transitive dependencies etc.
+
+Q12 - What is `node_modules` ? Is it a good idea to push that on git?
+Ans - heavy folder which contains all the dependencies & transitive dependencies used in our project. We shouldn't push into git because it is very heavy & we can also generate it on server.
+
+Q13 - What is the `dist` folder?
+Ans - dist folder contains all the files after we create our build it contains our minified files , images , css etc.
+
+Q14 - What is `browserlists`?
+Ans - browserlists ensures in which & how much total %age of worldwide user will our application be accessible to according to browser versions.
+
+Q15 - Read about dif bundlers: vite, webpack, parcel
+Q16 - Read about: ^ - caret and ~ - tilda
+Q17 - Read about Script types in html (MDN Docs)
