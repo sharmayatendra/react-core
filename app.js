@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const heading = (
   <h1 id="jsx" key="jsx">
@@ -47,5 +48,21 @@ const NestedHeader = () => {
   );
 };
 
+const HeaderComponent = () => {
+  return (
+    <header className="header">
+      <div className="img-container">
+        <img
+          src="https://kadaksinghdd.in/assets/img/khadak-singh-da-dhaba-final-logo_optimized.png"
+          alt="logo"
+        />
+      </div>
+
+      <input type="search" className="inp" placeholder="search..." />
+      <span className="material-symbols-outlined icon">person</span>
+    </header>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<NestedHeader />);
+root.render(<HeaderComponent />);

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  /* background-color: aqua; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+  padding: 16px;
+  height: 80px;
+  position: fixed;
+  justify-content: space-around;
+}
+
+.img-container {
+  width: 85px;
+}
+
+.img-container > img {
+  max-width: 100%;
+}
+
+.inp {
+  outline: none;
+  padding: 12px;
+  width: 16rem;
+  border-radius: 20px;
+}
+.material-symbols-outlined.icon {
+  font-size: 40px;
+}
