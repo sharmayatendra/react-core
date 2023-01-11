@@ -85,3 +85,34 @@ Ans - browserlists ensures in which & how much total %age of worldwide user will
 Q15 - Read about dif bundlers: vite, webpack, parcel
 Q16 - Read about: ^ - caret and ~ - tilda
 Q17 - Read about Script types in html (MDN Docs)
+
+Lecture-3: Laying foundation
+
+Q18 - JSX?
+Ans - JSX is nothing but just like a HTML like syntax but not exactly HTML. It is also not HTML inside JavaScript.
+
+Q19 - React.createElement vs JSX
+Ans - JSX is just a syntactic sugar which will finally convert into React.createElement(object) which converts into HTML.
+
+Q20 - Benefits of JSX.
+Ans - Readability, Syntactical sugar , maintainability , less code , developer experience.
+
+Q21 - Behind the scenes of JSX.
+Ans - JSX --> React.createElement --> Object --> HTML(DOM).
+
+Q22 - Babel and Parcel role in JSX.
+Ans - As we write JSX it can't be read by our normal JavaScript so it needs some compiler/transpiler i.e babel to understand the JSX and since when we install parcel we automatically gets babel as one of its dependencies so its useful for code compilation.
+
+Q23 - Components
+Ans - Piece of code written using JSX.
+
+Q24 - Functional Components.
+Ans - Functional Components is nothing but just a normal function in JS. It works the same way as JS function.
+    : Composing Components - whenever we access one component into another component is known as component composition.
+
+Q25 - {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>}
+Ans - 1st one is simply wanted to show JSX element 2nd & 3rd is same when we show Functional Components.
+
+
+
+
