@@ -12,12 +12,12 @@
   box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
   padding: 16px;
   height: 80px;
-  position: fixed;
+  /* position: fixed; */
   justify-content: space-around;
 }
 
 .img-container {
-  width: 85px;
+  width: 75px;
 }
 
 .img-container > img {
@@ -32,4 +32,38 @@
 }
 .material-symbols-outlined.icon {
   font-size: 40px;
+}
+
+.list-items {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 4px;
+}
+
+.list-items > li {
+  padding: 8px;
+}
+
+.body {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  flex-grow: 2;
+}
+
+.restaurant-card {
+  border: 1px solid black;
+  padding: 8px;
+  width: 16rem;
+}
+
+.restaurant-card > img {
+  width: 100%;
+}
+
+.restaurant-card:hover {
+  border: 1px solid rgb(221, 215, 215);
+  box-shadow: 12px 12px 12px 10px rgba(238, 232, 232, 0.2);
 }

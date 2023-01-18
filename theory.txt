@@ -113,6 +113,42 @@ Ans - Functional Components is nothing but just a normal function in JS. It work
 Q25 - {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>}
 Ans - 1st one is simply wanted to show JSX element 2nd & 3rd is same when we show Functional Components.
 
+Lecture-4: Talk is cheap, show me code
+
+Q26 - Is JSX mandatory for react?
+Ans - No JSX is not mandatory we can make our whole app using React.createElement
+
+Q27 - Is ES6 mandatory for react?
+Ans - No, ES6 is not mandatory we can write our code with help of basic JS syntax as well
+
+Q28 - Same as Q25.
+
+Q29 - How can we write comments in JSX?
+Ans - { /* */} in this fashion we can write comments
+
+Q30 - What is <React.Fragment> </React.Fragment> and <></>?
+Ans - React.Fragment is used when we don't require any extra element on DOM which is not required then we wrap our code inside Fragment. They both are same thing. 2nd one is shorthand syntax of first one.
+
+Q31 - What is Virtual DOM?
+Ans - It is actual representation of original DOM. It helps React to faster updates the view by using Reconciliation and Diffing algorithm behind the scenes.
+
+Q32 - What is Reconciliation in React?
+Ans - The diffing algorithm which react uses to update the DOM nodes or the changes which needs to be reflected upon the view. Reconciliation technique/process behind the scenes uses Diffing to updates DOM.
+
+Q33 - What is React Fiber?
+Ans - Its a kind of latest react engine which keeps track of changes. Means updated version of reconciler.
+
+Q34 - Why we need keys in react?
+Ans - because while Reconciliation process takes place react needs to know which node or DOM element has changed which part needs to be updated.
+
+Q35 - Can we use index as a key?
+Ans - we can use but its not a good practice ideal way to use key is to use unique value/id to it but if we dont have any unique value then we can assign index as a key.
+
+Q36 - What is props in react?
+Ans - Props are properties which we can pass from parent to child component.It is like arguments which we pass to normal function.
+
+Q37 - What is config driven UI?
+Ans - It consist of some kind of configuration which can be used to show different data into the UI according to different users.
 
 
 
