@@ -150,5 +150,21 @@ Ans - Props are properties which we can pass from parent to child component.It i
 Q37 - What is config driven UI?
 Ans - It consist of some kind of configuration which can be used to show different data into the UI according to different users.
 
+Lecture5: let's get hooked
+
+Q38 - what is difference b/w named export, default export & * as export?
+Ans - Named export is mainly used for utils function or config files in this we directly export function.
+      Default export: we define our function/component and export it default
+      * as export: means everything from one file will be exported.
+    
+Q39 - What is importance of config.js/constants.js file?
+Ans - It helps us to write more modular as well as reusable code wherever we required we directly use that.
+
+Q40 - What are react hooks?
+Ans - Hooks are JavaScript functions which gives us some Functionality to handle the things like useState,useEffect etc.
+
+Q41 - Why do we need useState hook?
+Ans - We need it because react can keep track of normal JS variables it needs some react variable through which it can track and update the UI through the setter function.
+
 
 
