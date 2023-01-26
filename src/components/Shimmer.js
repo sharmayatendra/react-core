@@ -3,8 +3,8 @@ const Shimmer = () => {
     <div className="flex">
       {Array(4)
         .fill("")
-        .map((_) => (
-          <div className="shimmer-card">
+        .map((_, index) => (
+          <div className="shimmer-card" key={index}>
             <div className="shimmerBG media"></div>
             <div className="p-32">
               <div className="shimmerBG title-line"></div>

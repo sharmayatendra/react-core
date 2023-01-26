@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Title = () => {
   return (
@@ -30,12 +31,29 @@ const Header = () => {
         <button>search</button>
       </div> */}
       <ul className="list-items">
-        <li>Home</li>
-        <li>Contact</li>
-        <li>About us</li>
-        <li>Cart</li>
+        <li>
+          <Link to="/" className="link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" className="link">
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link to="about" className="link">
+            About us
+          </Link>
+        </li>
+        <li>
+          <Link className="link">Cart</Link>
+        </li>
         <span className="material-symbols-outlined icon">person</span>
       </ul>
+      <Link to="login">
+        <button>Login</button>
+      </Link>
     </header>
   );
 };

@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { RESTAURANT_LIST } from "../../constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const filterData = (searchText, restaurants) => {
   return restaurants.filter((restro) =>
@@ -9,10 +11,27 @@ const filterData = (searchText, restaurants) => {
 };
 
 const Body = () => {
+  const [allRestaurants, setAllRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchInp, setSearchInp] = useState("");
-  const [allRestaurants, setAllRestaurants] = useState(RESTAURANT_LIST);
 
-  return (
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.52572220267605&lng=77.39057801663876&page_type=DESKTOP_WEB_LISTING"
+    );
+    const jsonData = await data.json();
+    setAllRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(jsonData?.data?.cards[2]?.data?.data?.cards);
+  }
+
+  //early returning here
+  if (!allRestaurants) return null;
+
+  return allRestaurants.length > 0 ? (
     <div className="body">
       <div>
         <input
@@ -26,18 +45,26 @@ const Body = () => {
           className="btn"
           onClick={() => {
             const filteredData = filterData(searchInp, allRestaurants);
-            setAllRestaurants(filteredData);
+            setFilteredRestaurants(filteredData);
           }}
         >
           Search
         </button>
       </div>
-      <div className="card-container">
-        {allRestaurants.map((restaurant) => (
-          <RestaurantCard {...restaurant.data} />
-        ))}
-      </div>
+      {filteredRestaurants.length > 0 ? (
+        <div className="card-container">
+          {filteredRestaurants.map((restaurant) => (
+            <Link to={`/restaurant/${restaurant?.data?.id}`} className="link">
+              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <h1>No matching restro found!😢😢</h1>
+      )}
     </div>
+  ) : (
+    <Shimmer />
   );
 };
 
