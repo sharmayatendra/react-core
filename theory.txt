@@ -206,3 +206,29 @@ Ans - syntactical sugar for promises
 
 Q52 - use of data.json() in getRestaurants()?
 Ans - it is converting our response stream to readable json format.
+
+Lecture8 - Let's get classy
+Q53 - How do you create nested routes react-router-dom configuration?
+Ans - As we make children (arr) we can create similar to that in whichever base route it is required.
+
+Q54 - Read about createHashRouter, createMemoryRouter from react-router-dom docs.
+Ans - createHashRouter: it is useful if unable to configure web server to direct all traffic to React router application.Instead of using normal URLs it will use portion(#) of url to manage application url.
+    - createMemoryRouter: It uses it's own history stack rather than using browser history. Primarily used for testing purpose.
+
+Q55 - What is order of lifecycle methods calls in class based components?
+Ans - Constructor -> render -> componentDidMount -> componentDidUpdate(if any update) -> comoponentWillUnmount(for cleanup)
+
+Q56 - Why do we use componentDidMount?
+Ans - For mounting of the component on the initial load. This is the best place to make an api call.
+
+Q57 - Why do we use componentWillUnmount?Show examples.
+Ans - to cleanup the things so that performance of our app wouldn't effect.
+    example - making a timer and cleaning that up in componentWillUnmount.
+
+Q58 - Why do we use super(props) in constructor?
+Ans - super(props) is used to access this.props inside the component in which it is used because in ES6 to while using class to access parent prop kind of inheritance we need to use that.
+
+Q59 - Why can't we have the callback function of useEffect async?
+Ans - Because useEffect callback function doesn't expects a promise either should return nothing or a function.
+    for ex: cleanup function for timer
+
