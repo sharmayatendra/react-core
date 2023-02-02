@@ -49,6 +49,11 @@ const Header = () => {
         <li>
           <Link className="link">Cart</Link>
         </li>
+        <li>
+          <Link to="instamart" className="link">
+            Instamart
+          </Link>
+        </li>
         <span className="material-symbols-outlined icon">person</span>
       </ul>
       <Link to="login">
