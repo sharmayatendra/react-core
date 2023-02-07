@@ -15,16 +15,16 @@ const MyTextInput = ({ label, ...props }) => {
 
 const Login = () => {
   return (
-    <div className="form-container">
+    <div className="">
       <Formik
         initialValues={{ firstName: "", lastName: "", email: "" }}
         onSubmit={(values, { setSubmitting }) => {
           setSubmitting(false);
         }}
       >
-        <Form className="form">
+        <Form className="">
           <MyTextInput
-            className="txt-inp"
+            className=""
             label="First Name"
             name="firstName"
             type="text"
@@ -32,7 +32,7 @@ const Login = () => {
           />
 
           <MyTextInput
-            className="txt-inp"
+            className=""
             label="Last Name"
             name="lastName"
             type="text"
@@ -40,7 +40,7 @@ const Login = () => {
           />
 
           <MyTextInput
-            className="txt-inp"
+            className=""
             label="Email Address"
             name="email"
             type="email"

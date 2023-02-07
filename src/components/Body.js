@@ -8,27 +8,23 @@ import useGetRestaurants from "../hooks/useGetRestaurants";
 
 const Body = () => {
   const [searchInp, setSearchInp] = useState("");
-
   const [allRestaurants, filteredRestaurants, setFilteredRestaurants] =
     useGetRestaurants();
-
   console.log("rest", allRestaurants);
-
   //early returning here
   if (!allRestaurants) return null;
-
   return allRestaurants.length > 0 ? (
-    <div className="body">
-      <div>
+    <div className=" flex flex-col items-center gap-4 mt-20 p-4">
+      <div className="flex gap-2 flex-wrap items-center justify-center">
         <input
           type="search"
-          className="inp"
+          className="border border-gray-light outline-none p-2 rounded-sm focus:border-orange-light"
           placeholder="search for restaurants..."
           value={searchInp}
           onChange={(e) => setSearchInp(e.target.value)}
         />
         <button
-          className="btn"
+          className="p-2 bg-orange-default text-white font-bold hover:scale-105"
           onClick={() => {
             const filteredData = filterData(searchInp, allRestaurants);
             setFilteredRestaurants(filteredData);
@@ -38,11 +34,11 @@ const Body = () => {
         </button>
       </div>
       {filteredRestaurants.length > 0 ? (
-        <div className="card-container">
+        <div className="grid grid-cols-1 place-items-start gap-8 sm:grid-cols-3 md:grid-cols-4">
           {filteredRestaurants.map((restaurant) => (
             <Link
               to={`/restaurant/${restaurant?.data?.id}`}
-              className="link"
+              className=""
               key={restaurant.data.id}
             >
               <RestaurantCard {...restaurant.data} key={restaurant.data.id} />

@@ -14,10 +14,12 @@ const RestaurantDetails = () => {
   return (
     <>
       <Banner {...restaurantDetail} />
-      <div className="restaurant-dish-container">
-        {menuItems.map((item) => (
-          <RestaurantDishCard {...item} />
-        ))}
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col  my-auto mx-0">
+          {menuItems.map((item) => (
+            <RestaurantDishCard {...item} key={item.id} />
+          ))}
+        </div>
       </div>
     </>
   );

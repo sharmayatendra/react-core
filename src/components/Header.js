@@ -1,14 +1,12 @@
 import { useState } from "react";
+import Logo from "../assets/img/logo.webp";
 import { Link } from "react-router-dom";
 
 const Title = () => {
   return (
-    <div className="img-container">
+    <div className="hidden sm:flex w-[4rem]">
       <a href="/">
-        <img
-          src="https://logosandtypes.com/wp-content/uploads/2021/01/swiggy.svg"
-          alt="logo"
-        />
+        <img src={Logo} alt="logo" className="w-full" />
       </a>
     </div>
   );
@@ -18,7 +16,7 @@ const Header = () => {
   //   const [searchInp, setSearchInp] = useState("");
 
   return (
-    <header className="header">
+    <header className="flex items-center w-full z-10 bg-white shadow-md fixed top-0 h-16 p-2 sm:justify-between ">
       <Title />
       {/* <div>
         <input
@@ -30,35 +28,35 @@ const Header = () => {
         />
         <button>search</button>
       </div> */}
-      <ul className="list-items">
-        <li>
-          <Link to="/" className="link">
+      <ul className="flex flex-wrap px-4 gap-2 grow sm:grow-0 ">
+        <li className="grow">
+          <Link to="/" className="">
             Home
           </Link>
         </li>
-        <li>
-          <Link to="contact" className="link">
+        <li className="grow">
+          <Link to="contact" className="">
             Contact
           </Link>
         </li>
-        <li>
-          <Link to="about" className="link">
+        <li className="grow">
+          <Link to="about" className="">
             About us
           </Link>
         </li>
-        <li>
-          <Link className="link">Cart</Link>
+        <li className="grow">
+          <Link className="">Cart</Link>
         </li>
-        <li>
-          <Link to="instamart" className="link">
+        <li className="grow">
+          <Link to="instamart" className="">
             Instamart
           </Link>
         </li>
-        <span className="material-symbols-outlined icon">person</span>
+        {/* <span className="material-symbols-outlined">person</span> */}
       </ul>
-      <Link to="login">
+      {/* <Link to="login">
         <button>Login</button>
-      </Link>
+      </Link> */}
     </header>
   );
 };

@@ -1,4 +1,5 @@
 import { IMG_CDN_URL } from "../../constants";
+import Food from "../assets/img/food.jpg";
 
 const RestaurantDishCard = ({
   name,
@@ -7,18 +8,28 @@ const RestaurantDishCard = ({
   cloudinaryImageId,
 }) => {
   return (
-    <div className="restaurant-dish-card-container">
-      <div className="restaurant-dish-detail">
-        <h3 className="dishname">{name}</h3>
-        <h3 className="dishprice">₹ {price / 100}</h3>
-        {description && <p className="dish-description">{description}</p>}
+    <div className="mt-20 max-w-3xl p-4 flex gap-8 justify-between">
+      <div className="flex flex-col max-w-[25rem]">
+        <h3 className="text-black opacity-80 font-bold text-lg">{name}</h3>
+        <h3 className="text-gray-light mt-2">₹ {price / 100}</h3>
+
+        {description && (
+          <p className="mt-6 text-sm text-gray-xlight w-full">{description}</p>
+        )}
       </div>
 
-      <div className="restaurant-dish-img">
-        <img src={IMG_CDN_URL + cloudinaryImageId} alt="dish-img" />
-        <div className="btn-container">
-          <button className="add-btn">Add</button>
-        </div>
+      <div className="w-40 relative ">
+        <img
+          src={cloudinaryImageId ? IMG_CDN_URL + cloudinaryImageId : Food}
+          alt="dish-img"
+          className="w-full rounded "
+        />
+
+        {/* <div className="absolute bottom-0.5 left-8"> */}
+        <button className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold">
+          Add
+        </button>
+        {/* </div> */}
       </div>
     </div>
   );
