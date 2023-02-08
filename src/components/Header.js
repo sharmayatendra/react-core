@@ -45,7 +45,9 @@ const Header = () => {
           </Link>
         </li>
         <li className="grow">
-          <Link className="">Cart</Link>
+          <Link to="/cart" className="">
+            Cart
+          </Link>
         </li>
         <li className="grow">
           <Link to="instamart" className="">

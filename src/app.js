@@ -10,6 +10,7 @@ import Error from "./components/Error";
 import RestaurantDetails from "./components/RestaurantDetails";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
+import Cart from "./components/Cart";
 import Profile from "./components/Profile";
 import ProfileClass from "./components/ProfileClass";
 import useOnline from "./hooks/useOnline";
@@ -63,6 +64,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+
+      {
+        path: "/cart",
+        element: <Cart />,
       },
 
       {
