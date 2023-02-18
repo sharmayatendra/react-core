@@ -1,5 +1,7 @@
+import { useDispatch } from "react-redux";
 import { IMG_CDN_URL } from "../../constants";
 import Food from "../assets/img/food.jpg";
+import { addItem } from "../features/cart/cartSlice";
 
 const RestaurantDishCard = ({
   name,
@@ -7,6 +9,8 @@ const RestaurantDishCard = ({
   description,
   cloudinaryImageId,
 }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="mt-20 max-w-3xl p-4 flex gap-8 justify-between">
       <div className="flex flex-col max-w-[25rem]">
@@ -26,7 +30,10 @@ const RestaurantDishCard = ({
         />
 
         {/* <div className="absolute bottom-0.5 left-8"> */}
-        <button className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold">
+        <button
+          className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold"
+          onClick={() => dispatch(addItem({ name, price, description }))}
+        >
           Add
         </button>
         {/* </div> */}

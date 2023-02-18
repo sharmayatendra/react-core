@@ -14,6 +14,8 @@ import Cart from "./components/Cart";
 import Profile from "./components/Profile";
 import ProfileClass from "./components/ProfileClass";
 import useOnline from "./hooks/useOnline";
+import { Provider } from "react-redux";
+import store from "./app/store";
 
 // lazy loading instamart component here
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -31,11 +33,13 @@ const AppLayout = () => {
     );
   }
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <Provider store={store}>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </Provider>
   );
 };
 

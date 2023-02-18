@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/img/logo.webp";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Title = () => {
   return (
@@ -14,6 +15,8 @@ const Title = () => {
 
 const Header = () => {
   //   const [searchInp, setSearchInp] = useState("");
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <header className="flex items-center w-full z-10 bg-white shadow-md fixed top-0 h-16 p-2 sm:justify-between ">
@@ -46,7 +49,7 @@ const Header = () => {
         </li>
         <li className="grow">
           <Link to="/cart" className="">
-            Cart
+            Cart - {cartItems.length} items
           </Link>
         </li>
         <li className="grow">

@@ -20,7 +20,7 @@ class ProfileClass extends React.Component {
   render() {
     console.log("child - render");
     return (
-      <div>
+      <div className="mt-12">
         <h1>name: {this.props.name}</h1>
         <h2>{this.state.count}</h2>
         <button
