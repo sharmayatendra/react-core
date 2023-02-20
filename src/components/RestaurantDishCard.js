@@ -32,7 +32,9 @@ const RestaurantDishCard = ({
         {/* <div className="absolute bottom-0.5 left-8"> */}
         <button
           className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold"
-          onClick={() => dispatch(addItem({ name, price, description }))}
+          onClick={() =>
+            dispatch(addItem({ name, price, description, cloudinaryImageId }))
+          }
         >
           Add
         </button>
