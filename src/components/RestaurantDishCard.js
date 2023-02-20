@@ -8,6 +8,7 @@ const RestaurantDishCard = ({
   price,
   description,
   cloudinaryImageId,
+  variantsV2,
 }) => {
   const dispatch = useDispatch();
 
@@ -15,7 +16,9 @@ const RestaurantDishCard = ({
     <div className="mt-20 max-w-3xl p-4 flex gap-8 justify-between">
       <div className="flex flex-col max-w-[25rem]">
         <h3 className="text-black opacity-80 font-bold text-lg">{name}</h3>
-        <h3 className="text-gray-light mt-2">₹ {price / 100}</h3>
+        <h3 className="text-gray-light mt-2">
+          ₹ {price ? price / 100 : variantsV2?.pricing_models[0]?.price / 100}
+        </h3>
 
         {description && (
           <p className="mt-6 text-sm text-gray-xlight w-full">{description}</p>

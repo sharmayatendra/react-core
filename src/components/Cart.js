@@ -8,16 +8,18 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="mt-20 p-4 flex flex-wrap gap-2">
+    <div className="mt-20 flex flex-col p-4">
       <button
-        className="px-2 border border-gray-light"
+        className="px-4 border border-red bg-red text-white rounded-sm w-32 self-center sm:self-end mr-2"
         onClick={() => dispatch(clearCart())}
       >
         Clear Cart
       </button>
-      {cartItems.map((item) => (
-        <CartCard {...item} />
-      ))}
+      <div className="mt-8 p-4 flex flex-wrap gap-2">
+        {cartItems.map((item) => (
+          <CartCard {...item} />
+        ))}
+      </div>
     </div>
   );
 };
