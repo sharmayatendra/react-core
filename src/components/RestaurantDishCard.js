@@ -1,4 +1,5 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { IMG_CDN_URL } from "../../constants";
 import Food from "../assets/img/food.jpg";
 import { addItem } from "../features/cart/cartSlice";
@@ -9,8 +10,11 @@ const RestaurantDishCard = ({
   description,
   cloudinaryImageId,
   variantsV2,
+  id,
 }) => {
   const dispatch = useDispatch();
+  const cartItems = useSelector((store) => store.cart.items);
+  const itemAlreadyInCart = cartItems.find((item) => item.id === id);
 
   return (
     <div className="mt-20 max-w-3xl p-4 flex gap-8 justify-between">
@@ -33,14 +37,46 @@ const RestaurantDishCard = ({
         />
 
         {/* <div className="absolute bottom-0.5 left-8"> */}
-        <button
+        {itemAlreadyInCart ? (
+          <button className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold">
+            <Link to="/cart">Go to Cart</Link>
+          </button>
+        ) : (
+          <button
+            className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold"
+            onClick={() =>
+              dispatch(
+                addItem({
+                  name,
+                  price,
+                  description,
+                  cloudinaryImageId,
+                  id,
+                  quantity: 1,
+                })
+              )
+            }
+          >
+            Add
+          </button>
+        )}
+        {/* <button
           className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold"
           onClick={() =>
-            dispatch(addItem({ name, price, description, cloudinaryImageId }))
+            dispatch(
+              addItem({
+                name,
+                price,
+                description,
+                cloudinaryImageId,
+                id,
+                quantity: 1,
+              })
+            )
           }
         >
           Add
-        </button>
+        </button> */}
         {/* </div> */}
       </div>
     </div>
