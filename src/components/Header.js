@@ -7,7 +7,7 @@ const Title = () => {
   return (
     <div className="hidden sm:flex w-[4rem]">
       <a href="/">
-        <img src={Logo} alt="logo" className="w-full" />
+        <img data-testid="logo" src={Logo} alt="logo" className="w-full" />
       </a>
     </div>
   );
@@ -33,27 +33,27 @@ const Header = () => {
       </div> */}
       <ul className="flex flex-wrap px-4 gap-2 grow sm:grow-0 ">
         <li className="grow">
-          <Link to="/" className="">
+          <Link to="/" className="" data-testid="links">
             Home
           </Link>
         </li>
         <li className="grow">
-          <Link to="contact" className="">
+          <Link to="contact" className="" data-testid="links">
             Contact
           </Link>
         </li>
         <li className="grow">
-          <Link to="about" className="">
+          <Link to="about" className="" data-testid="links">
             About us
           </Link>
         </li>
         <li className="grow">
-          <Link to="/cart" className="">
+          <Link to="/cart" className="" data-testid="cart">
             Cart - {cartItems.length} items
           </Link>
         </li>
         <li className="grow">
-          <Link to="instamart" className="">
+          <Link to="instamart" className="" data-testid="links">
             Instamart
           </Link>
         </li>
