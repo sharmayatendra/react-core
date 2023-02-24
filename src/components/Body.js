@@ -13,13 +13,17 @@ const Body = () => {
     useGetRestaurants();
   console.log("rest", allRestaurants);
   //early returning here
-  if (!allRestaurants) return null;
+  // if (!allRestaurants) {
+  //   console.log("logging");
+  //   return null;
+  // }
   return allRestaurants.length > 0 ? (
     <div className="mt-20">
       {/* <Carousel /> */}
       <div className=" flex flex-col items-center gap-4 mt-4 p-4">
         <div className="flex flex-col gap-2 flex-wrap sm:flex-row items-center justify-center">
           <input
+            data-testid="search-input"
             type="search"
             className="border border-gray-light outline-none p-2 rounded-sm focus:border-orange-light"
             placeholder="search for restaurants..."
@@ -27,6 +31,7 @@ const Body = () => {
             onChange={(e) => setSearchInp(e.target.value)}
           />
           <button
+            data-testid="search-btn"
             className="p-2 bg-orange-default text-white font-bold hover:scale-105"
             onClick={() => {
               const filteredData = filterData(searchInp, allRestaurants);
@@ -37,7 +42,10 @@ const Body = () => {
           </button>
         </div>
         {filteredRestaurants.length > 0 ? (
-          <div className="grid grid-cols-1 place-items-start gap-8 sm:grid-cols-3 md:grid-cols-4">
+          <div
+            className="grid grid-cols-1 place-items-start gap-8 sm:grid-cols-3 md:grid-cols-4"
+            data-testid="res-list"
+          >
             {filteredRestaurants.map((restaurant) => (
               <Link
                 to={`/restaurant/${restaurant?.data?.id}`}
