@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { GET_ALLRESTAURANT_URL } from "../../constants";
-import useFetch from "./useFetch";
 
 const useGetRestaurants = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
