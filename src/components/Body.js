@@ -11,12 +11,7 @@ const Body = () => {
   const [searchInp, setSearchInp] = useState("");
   const [allRestaurants, filteredRestaurants, setFilteredRestaurants] =
     useGetRestaurants();
-  console.log("rest", allRestaurants);
-  //early returning here
-  // if (!allRestaurants) {
-  //   console.log("logging");
-  //   return null;
-  // }
+
   return allRestaurants.length > 0 ? (
     <div className="mt-20">
       {/* <Carousel /> */}
@@ -57,7 +52,7 @@ const Body = () => {
             ))}
           </div>
         ) : (
-          <h1>No matching restro found!😢😢</h1>
+          <h1 data-testid="no-match">No matching restro found!😢😢</h1>
         )}
       </div>
     </div>
