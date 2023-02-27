@@ -10,7 +10,6 @@ const useRestaurantDetails = (id) => {
   const getRestaurantDetail = async () => {
     const res = await fetch(RESTAURANT_DETAIL_URL + id);
     const { data } = await res.json();
-    console.log(data);
     setRestaurantDetail(data);
   };
 

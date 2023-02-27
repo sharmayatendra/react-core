@@ -24,12 +24,17 @@ const AppLayout = () => {
   const isOnline = useOnline();
 
   if (!isOnline) {
+    console.log("gaya");
     return (
-      <>
-        <Header />
-        <h1>🔴, please check your internet!!</h1>
-        <Footer />
-      </>
+      <Provider store={store}>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <h1 className="mt-20 text-center text-4xl text-bold">
+            🔴, please check your internet!!
+          </h1>
+          <Footer />
+        </div>
+      </Provider>
     );
   }
   return (

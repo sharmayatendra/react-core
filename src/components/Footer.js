@@ -42,7 +42,12 @@ const Footer = () => {
       <div className="flex flex-col flex-wrap justify-between items-center gap-2 mt-4 sm:flex-row text-white">
         <div className="w-20">
           <a href="/">
-            <img src={Logo} alt="logo" className="w-full" />
+            <img
+              src={Logo}
+              alt="logo"
+              className="w-full"
+              data-testid="footer-logo"
+            />
           </a>
         </div>
 
