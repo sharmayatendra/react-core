@@ -19,7 +19,12 @@ const RestaurantDishCard = ({
   return (
     <div className="mt-20 max-w-3xl p-4 flex gap-8 justify-between">
       <div className="flex flex-col max-w-[25rem]">
-        <h3 className="text-black opacity-80 font-bold text-lg">{name}</h3>
+        <h3
+          className="text-black opacity-80 font-bold text-lg"
+          data-testid="menu-items"
+        >
+          {name}
+        </h3>
         <h3 className="text-gray-light mt-2">
           ₹ {price ? price / 100 : variantsV2?.pricing_models[0]?.price / 100}
         </h3>
@@ -56,6 +61,7 @@ const RestaurantDishCard = ({
                 })
               )
             }
+            data-testid="add-btn"
           >
             Add
           </button>

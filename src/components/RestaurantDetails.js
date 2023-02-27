@@ -10,12 +10,11 @@ const RestaurantDetails = () => {
   if (!restaurantDetail) return null;
 
   const menuItems = Object?.values(restaurantDetail?.menu?.items);
-  console.log(menuItems);
   return (
     <>
       <Banner {...restaurantDetail} />
       <div className="flex flex-col items-center">
-        <div className="flex flex-col  my-auto mx-0">
+        <div className="flex flex-col  my-auto mx-0" data-testid="menu-items2">
           {menuItems.map((item) => (
             <RestaurantDishCard {...item} key={item.id} />
           ))}
