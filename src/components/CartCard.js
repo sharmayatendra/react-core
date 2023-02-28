@@ -7,7 +7,10 @@ const CartCard = ({ name, id, cloudinaryImageId, price, quantity }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="max-w-[16rem] border border-white p-4 hover:border-gray-xlight">
+    <div
+      className="max-w-[16rem] border border-white p-4 hover:border-gray-xlight"
+      data-testid="cart-card"
+    >
       <img
         src={cloudinaryImageId ? IMG_CDN_URL + cloudinaryImageId : Food}
         className="aspect-video"

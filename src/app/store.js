@@ -1,6 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartSlice from "../features/cart/cartSlice";
 
+export function setupStore(preloadedState) {
+  return configureStore({
+    reducer: {
+      cart: cartSlice
+    },
+    preloadedState,
+  });
+}
+
 const store = configureStore({
   reducer: {
     cart: cartSlice,

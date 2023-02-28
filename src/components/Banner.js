@@ -47,8 +47,8 @@ const Banner = ({
           <legend>Offers</legend>
           <div className="flex flex-col gap-6 mt-4">
             {aggregatedDiscountInfo?.descriptionList.map((disc, idx) => (
-              <div className="flex gap-6 items-center text-sm">
-                <span class="material-symbols-outlined border rounded-full p-px ">
+              <div className="flex gap-6 items-center text-sm" key={idx}>
+                <span className="material-symbols-outlined border rounded-full p-px ">
                   percent
                 </span>
                 <span key={idx} className="">

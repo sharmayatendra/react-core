@@ -12,12 +12,13 @@ const Cart = () => {
       <button
         className="px-4 border border-red bg-red text-white rounded-sm w-32 self-center sm:self-end mr-2"
         onClick={() => dispatch(clearCart())}
+        data-testid="clear-cart"
       >
         Clear Cart
       </button>
       <div className="mt-8 p-4 flex flex-wrap gap-2">
         {cartItems.map((item) => (
-          <CartCard {...item} />
+          <CartCard {...item} key={item.id} />
         ))}
       </div>
     </div>
