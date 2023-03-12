@@ -34,7 +34,7 @@ const RestaurantDishCard = ({
         )}
       </div>
 
-      <div className="w-40 relative ">
+      <div className="w-40 flex flex-col items-center">
         <img
           src={cloudinaryImageId ? IMG_CDN_URL + cloudinaryImageId : Food}
           alt="dish-img"
@@ -43,12 +43,12 @@ const RestaurantDishCard = ({
 
         {/* <div className="absolute bottom-0.5 left-8"> */}
         {itemAlreadyInCart ? (
-          <button className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold">
+          <button className=" px-4 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold relative bottom-4">
             <Link to="/cart">Go to Cart</Link>
           </button>
         ) : (
           <button
-            className=" px-8 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold"
+            className=" px-10 py-1.5 border border-gray-xlight bg-white text-green text-lg font-bold relative bottom-4"
             onClick={() =>
               dispatch(
                 addItem({

@@ -16,8 +16,22 @@ const useGetRestaurants = () => {
   };
 
   useEffect(() => {
-    getRestaurants();
-  }, []);
+    (async () => {
+      const res = await fetch(
+        "https://www.googleapis.com/youtube/v3/liveStreams?id=jab5aa5k5Sg&part=snippet&key=AIzaSyBDXfY3Snnw07X39rUEAw9ktybk9_bdkzo",
+        {
+          headers: {
+            Authorization: "Bearer " + "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",
+          },
+        }
+      );
+      const resp = await res.json();
+      console.log(resp);
+    })();
+  }, []),
+    useEffect(() => {
+      getRestaurants();
+    }, []);
 
   return [allRestaurants, filteredRestaurants, setFilteredRestaurants];
 };
