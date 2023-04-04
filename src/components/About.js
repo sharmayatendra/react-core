@@ -16,14 +16,10 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    console.log("parent constructor");
   }
 
   componentDidMount() {
-    this.timer = setInterval(() => {
-      console.log("about page");
-    }, 1000);
-    console.log("parent componentDidMount");
+    this.timer = setInterval(() => {}, 1000);
   }
 
   componentWillUnmount() {
@@ -31,7 +27,6 @@ class About extends React.Component {
   }
 
   render() {
-    console.log("parent render");
     return (
       <>
         <h2>this is about Component</h2>

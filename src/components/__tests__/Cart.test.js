@@ -21,7 +21,6 @@ test("cart items should load if cart is not empty", () => {
 
   const cartCard = cart.getAllByTestId("cart-card");
   expect(cartCard.length).toBe(1);
-  //   console.log(cartCount);
 });
 
 test("cart should be empty on clicking of clear cart button", () => {
@@ -35,8 +34,8 @@ test("cart should be empty on clicking of clear cart button", () => {
   );
 
   const clearCart = cart.getByTestId("clear-cart");
-  const cartItems = cart.getByTestId("cart")
-  fireEvent.click(clearCart)
+  const cartItems = cart.getByTestId("cart");
+  fireEvent.click(clearCart);
 
-  expect(cartItems.innerHTML).toBe("Cart - 0 items")
+  expect(cartItems.innerHTML).toBe("Cart - 0 items");
 });

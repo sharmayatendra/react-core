@@ -23,9 +23,13 @@ module.exports = {
         pale: "#E1B055",
       },
       gray: {
+        thin: "#EDF1F7",
         light: "#686B78",
         default: "#808080",
+        medium: "#3D4152",
         dark: "#171A29",
+        ultra: "#282C3F",
+        shimmer: "#e5e7eb",
         xlight: "#B2BEB5",
       },
       red: "#FF6161",
